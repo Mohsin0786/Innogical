@@ -4,7 +4,6 @@ import React,{useState,useEffect} from "react"
 import { BrowserRouter as Router, Switch, Route,Redirect } from "react-router-dom";
 import Playground from './Playground'
 import Dashboard from './Dashboard'
-import Modalbox from './Modalbox'
 import Header from './Header'
 function App() {
   const [openSignIn,setopenSignIn] = useState(false)
@@ -36,10 +35,6 @@ function App() {
                    <Dashboard  openSignIn={openSignIn} setopenSignIn={setopenSignIn} classCodes={classCodes}
                      setClassCodes={setClassCodes}
                    />
-                    </Route>
-                    <Route exact path="/">
-                   <Modalbox/>
-                   <h1>Modal</h1>
                     </Route>
                     <Redirect to="/" />
                 </Switch>
