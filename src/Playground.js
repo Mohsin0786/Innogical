@@ -6,8 +6,7 @@ function Playground() {
     fetch(`http://localhost:8000/savecode/${editorID}`)
     .then(response => response.json())
     .then(resdata => {
-      console.log("resdata get",resdata.data[0].code)
-      // setoutput(resdata.message)
+      
       nameInput.current.value = resdata.data[0].code
     })
   }, [])
@@ -29,7 +28,6 @@ function Playground() {
     fetch('http://localhost:8000/savecode', requestOptions)
       .then(response => response.json())
       .then(resdata => {
-        console.log("resdata",resdata)
         alert("Code Saved!!!!!!!!! refresh page to check")
        
       })
@@ -41,7 +39,7 @@ function Playground() {
     data.codedata = nameInput.current.value
     data.lang = lang;
     data.editorID = editorID
-    console.log("data wala",data)
+
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
