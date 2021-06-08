@@ -211,8 +211,8 @@ function Content({ setopenSignIn }) {
       </div>
       <div className="class-card-section" style={{ display: 'flex', marginLeft: '4rem',marginTop:'5rem' }}>
         {
-          parsedCardArray.map((data) => (
 
+          parsedCardArray==null?null:parsedCardArray.map((data) => (
             <Card name={data.projectName} keyid={data._id} lang={data.language}/>
           ))
 
